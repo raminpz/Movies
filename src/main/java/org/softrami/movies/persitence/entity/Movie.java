@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.softrami.movies.util.MovieGenre;
 
 import java.util.List;
 
@@ -25,7 +26,8 @@ public class Movie {
     @Column(nullable = false)
     private String director;
 
-    private String genre;
+    @Enumerated(EnumType.STRING)
+    private MovieGenre genre;
 
     private int releaseYear;
 

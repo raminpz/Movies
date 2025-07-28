@@ -1,0 +1,17 @@
+package org.softrami.movies.service;
+
+import org.softrami.movies.persitence.entity.Movie;
+import org.softrami.movies.util.MovieGenre;
+
+import java.util.List;
+
+public interface MovieService {
+    List<Movie> findAll();
+    List<Movie> findAllByTitle(String title);
+    List<Movie> findAllByGenre(MovieGenre genre);
+    List<Movie> findAllByGenreAndTitle(MovieGenre genre, String title);
+    Movie findOneById(Long id);
+    Movie createOne(Movie movie);
+    Movie updateOneById(Long id, Movie movie);
+    void deleteOneById(Long id);
+}
